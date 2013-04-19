@@ -3,7 +3,7 @@
 require 'msgpack' # need to install
 require 'optparse' # コマンドラインの引数取得用
 require 'csv'
-require 'zlib' # gip用
+require 'zlib' # gzip用
 
 #
 # csv形式からMsgPack形式に変換するスクリプト
