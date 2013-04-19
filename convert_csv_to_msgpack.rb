@@ -19,11 +19,13 @@ def option
   end.getopts
 end
 
+filename = option['input']
+
 # ヘッダー情報の取得
-infile = CSV.open(option['input'], 'rb')
+infile = CSV.open(filename, 'rb')
 
 # gzipの作成
-outfile = File.open("aed.csv.msgpack.gz", "wb")
+outfile = File.open("#{filename}.msgpack.gz", "wb")
 gz = Zlib::GzipWriter.new(outfile)
 
 # header情報の読み込みとheader分のシフト
